@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Downloader</title>
+    <link rel="stylesheet" href="{% static 'styles/downloader.css' %}">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class='fab fa-youtube'><span style="padding-left: 5px;">Yt-Downloader</span></i>
+        </div>
+
+        <nav class="nav-bar">
+            <ul>
+                <li>Mp4 video</li>
+                <li>Mp3 audio</li>
+                <li>search</li>
+            </ul>
+        </nav>
+    </header>
+    <h2>Youtube video downloader</h2>
+    
+    <div class="box">
+        <form action="ytdownload" method="GET">
+            {% csrf_token %}
+            <label for="">Enter the video url:</label><br>
+            <input type="url" id="hello" name="link" required>
+            <br>
+            <input type="submit" id='btn' value="Download">
+        </form>
+    </div>
+
+
+</body>
+</html>
