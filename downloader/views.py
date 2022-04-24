@@ -11,7 +11,6 @@ def downloads(request):
 def yt_download(request):
     if request.method == 'GET':
         link = request.GET['link']
-        
+        download_sucessful(link)
         
     return render(request, 'yt_download.html')
-        
