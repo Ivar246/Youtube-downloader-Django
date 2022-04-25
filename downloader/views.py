@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .action import download_sucessful
 import urllib
 # Create your views here.
@@ -18,6 +18,4 @@ def yt_download(request):
                 'download_sucessful': True
             })
         else:
-          return render(request, 'yt_download.html', {
-              'download_sucessful': False
-          })
+            redirect("home")
