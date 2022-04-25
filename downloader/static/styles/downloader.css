@@ -12,11 +12,12 @@ body{
     height: 100vh;
     width: 100vw;
     align-items: center;
-    background-color: #f8f9fa;
+    background-color: #d8dde1;
 }
 header{
-    height: 100px;
+    height: 70px;
     width: 100%;
+    background-color: #80878d;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -25,21 +26,54 @@ header{
 
 
 .logo{
-    color: red;
-    margin-left: -100px;
+    color: #f34423;
+    /* margin-left: -100px; */
 }
 .logo i{
     font-size: 30px;
     font-weight: bold;
 }
 
+.nav-bar{
+    margin-left: 300px;
+    display: flex;
+    align-items: center;
+}
+
 .nav-bar ul {
     display: flex;
     justify-content: space-around;
 }
+.nav-bar input{
+    height: 25px;
+    padding: 12px 2px;
+    outline: none;
+    border: none;
+    color: black;
+}
+.nav-bar input:focus{
+    padding:13px 2px;
+}
+
+.nav-bar .primary-btn{
+    height: 25px;
+    width: 55px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+  
+}
+
 .nav-bar ul li{
     padding: 20px;
     list-style: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 500ms ease-in-out;
+    cursor: pointer;
+}
+.nav-bar ul li:hover{
+    color: #fff;
 }
 
 h2{
@@ -86,11 +120,11 @@ h2{
     border-radius: 20px;
     font-size: 16px;
     margin-top: 10px;
-
     cursor: pointer;
     transition: 300ms ease-in-out;
 }
 #btn:hover{
      background-color: #fff;
      color: #4CAF50;
+     border: 0.5px solid #4CAF50;
 }

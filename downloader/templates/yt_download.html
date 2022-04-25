@@ -1,12 +1,21 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>report</title>
+    <link rel="stylesheet" href="{% static 'styles/yt_download.css'%}">
 </head>
 <body>
-    <h1>Downloaded sucessfully</h1>
+    {% if download_sucessful %}
+        <h1>Downloaded sucessfully</h1>
+        <p>check your download folder</p>
+    {% else %}
+      <h1>download failed! try again</h1>
+    {% endif %}
 </body>
 </html>

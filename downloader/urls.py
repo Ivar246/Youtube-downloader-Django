@@ -4,6 +4,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.downloads),
-    path('download', views.yt_download, name='yt_download')
+    path('home/', views.downloads),
+    path('home/download/', views.yt_download, name='yt_download')
 ]

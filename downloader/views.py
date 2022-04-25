@@ -11,6 +11,13 @@ def downloads(request):
 def yt_download(request):
     if request.method == 'GET':
         link = request.GET['link']
-        download_sucessful(link)
-        
-    return render(request, 'yt_download.html')
+        a = download_sucessful(link) # return boolean
+        print(a)
+        if a:
+            return render(request, 'yt_download.html', {
+                'download_sucessful': True
+            })
+        else:
+          return render(request, 'yt_download.html', {
+              'download_sucessful': False
+          })
