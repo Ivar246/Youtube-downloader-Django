@@ -18,4 +18,6 @@ def yt_download(request):
                 'download_sucessful': True
             })
         else:
-            redirect("home")
+            return render(request, 'yt_download.html', {
+            'download_sucessful': False
+        })

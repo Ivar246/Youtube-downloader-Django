@@ -5,6 +5,7 @@
     font-family: 'poppins', sans-serif;
 
 }
+
 body{
     overflow-x: hidden;
     display: flex;
@@ -14,6 +15,7 @@ body{
     align-items: center;
     background-color: #d8dde1;
 }
+
 header{
     height: 70px;
     width: 100%;
@@ -24,14 +26,13 @@ header{
     
 }
 
-
-.logo{
-    color: #f34423;
-    /* margin-left: -100px; */
+.logo {
+    display: flex;
+    align-items: center;
 }
-.logo i{
-    font-size: 30px;
-    font-weight: bold;
+.logo h1{
+    color: #cd3920;
+    padding-left: 5px;
 }
 
 .nav-bar{
